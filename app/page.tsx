@@ -320,9 +320,7 @@ export default function Home() {
 
         {/* Pricing Comparison Grid */}
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto text-left">
-          <div className="absolute top-6 right-6 bg-white px-4 py-2 rounded-full shadow text-sm font-semibold text-gray-800">
-              ₹5–10L+
-            </div>
+          
           {/* Traditional Consulting */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
