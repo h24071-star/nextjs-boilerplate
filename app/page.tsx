@@ -31,7 +31,7 @@ export default function Home() {
       <section id="hero" className="max-w-4xl scroll-mt-24">
         {/* Headline */}
         <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Your AI Strategy Partner for India’s MSMEs
+          The AI Strategy Partner for India’s Ambitious MSMEs
         </h1>
 
         {/* Subheadline */}
@@ -62,9 +62,19 @@ export default function Home() {
         </div>
 
         {/* Visual Placeholder */}
-        <div className="w-full h-72 border-2 border-dashed border-gray-300 flex items-center justify-center rounded-2xl bg-gray-100 text-gray-500">
-          [Product Demo or Dashboard Preview Placeholder]
-        </div>
+        <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+        <video
+          src = "AI Chatbot Mock.mp4"
+          controls
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-auto rounded-2xl"
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
       </section>
       {/* =================== STORY SECTION =================== */}
       <section id="story" className="w-full py-24 px-6 flex flex-col gap-24 scroll-mt-24">
@@ -162,18 +172,21 @@ export default function Home() {
               role: "Owner, Precision Auto Parts, Pune",
               quote:
                 "Before this tool, we had no idea where we were losing money. Now, I can see exactly what’s going wrong — and fix it before it hurts us.",
+              image: "/Rajesh Kumar.jpg",
             },
             {
               name: "Ananya Shah",
               role: "Founder, Craft & Clay, Jaipur",
               quote:
                 "I always thought consulting was only for big brands. This AI tool proved me wrong. It speaks my language — simple, clear, and actionable.",
+              image: "/Ananya Shah.jpg",
             },
             {
               name: "Faiz Rahman",
               role: "Managing Partner, Rahman Textiles, Tiruppur",
               quote:
                 "When I saw my MSME Health Score, it felt like someone finally understood my business. I didn’t need a 100-page report — just real steps that work.",
+              image: "/Faiz Rahman.jpg",
             },
           ].map((t, i) => (
             <motion.div
@@ -181,9 +194,15 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               className="snap-center flex-shrink-0 bg-gray-50 p-8 rounded-3xl shadow-md w-80 text-left transition-transform"
             >
-              <div className="w-14 h-14 rounded-full bg-gray-200 mb-4 mx-auto flex items-center justify-center text-gray-500">
-                [User Img]
-              </div>
+              <div className="w-24 h-24 mb-6 mx-auto relative rounded-full overflow-hidden shadow-lg ring-4 ring-[#F8C57C]/30">
+              <Image
+                src={t.image}
+                alt={t.name}
+                fill
+                /*className="object-cover"*/
+                sizes="96px"
+              />
+            </div>
               <p className="text-gray-700 italic mb-4">“{t.quote}”</p>
               <h3 className="font-semibold text-gray-900">{t.name}</h3>
               <p className="text-sm text-gray-500">{t.role}</p>
