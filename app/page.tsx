@@ -201,6 +201,114 @@ export default function Home() {
           </p>
         </div>
       </section>
+      {/* =================== AI ADVANTAGE SECTION =================== */}
+      <section className="w-full py-24 px-6 bg-gradient-to-b from-gray-50 to-white text-center">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          How Our AI Changes the Game
+        </h2>
+        <p className="text-lg text-gray-600 mb-16">
+          What once took months, meetings, and lakhs — now takes minutes, insights, and empathy.
+        </p>
+
+        {/* Before vs After Grid */}
+        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto text-left">
+          {/* BEFORE - Grant Thornton Bharat */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gray-100 rounded-3xl p-10 shadow-sm border-t-4 border-gray-400"
+          >
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              Before: Grant Thornton Bharat
+            </h3>
+
+            <ul className="space-y-5 text-gray-700 leading-relaxed">
+              <li className="flex items-start">
+                <span className="mr-3 text-gray-500 text-xl">📅</span>
+                Weeks of meetings, reports, and approvals before action begins.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-gray-500 text-xl">💰</span>
+                High-cost, partner-led consulting — inaccessible to most MSMEs.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-gray-500 text-xl">🧱</span>
+                Rigid, human-dependent model that scales poorly.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-gray-500 text-xl">🔒</span>
+                Closed, proprietary systems with limited knowledge sharing.
+              </li>
+            </ul>
+
+            {/* Placeholder Visual */}
+            <div className="mt-8 h-56 rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center bg-gray-200 text-gray-600">
+              [Visual Placeholder – “Traditional Consulting Office”]
+            </div>
+          </motion.div>
+
+          {/* AFTER - AI Platform */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-blue-50 rounded-3xl p-10 shadow-sm border-t-4 border-blue-400"
+          >
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              After: Our AI Fractional Consulting Platform
+            </h3>
+
+            <ul className="space-y-5 text-gray-700 leading-relaxed">
+              <li className="flex items-start">
+                <span className="mr-3 text-blue-500 text-xl">⚡</span>
+                Instant, AI-powered diagnosis through the MSME Health Tool.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-blue-500 text-xl">💡</span>
+                Personalized, data-backed strategy recommendations generated in minutes.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-blue-500 text-xl">🌍</span>
+                Community-trained AI — continuously learning from MSMEs, students, and experts.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-blue-500 text-xl">💬</span>
+                Always available, multilingual, and scalable — your 24x7 virtual strategy partner.
+              </li>
+            </ul>
+
+            {/* Placeholder Visual */}
+            <div className="mt-8 h-56 rounded-2xl border-2 border-dashed border-blue-200 flex items-center justify-center bg-blue-100 text-blue-600">
+              [Visual Placeholder – “AI Dashboard / Data Flywheel Graphic”]
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Data Flywheel Visualization */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-24 max-w-4xl mx-auto bg-green-50 p-10 rounded-3xl shadow-sm"
+        >
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            The Self-Learning Intelligence Flywheel
+          </h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Every MSME that uses the platform strengthens it. Business data from users,
+            insights from MBA students, and expert feedback from consultants all feed
+            into the AI — creating a living, learning ecosystem that grows smarter with
+            each interaction.
+          </p>
+          <div className="h-60 rounded-2xl border-2 border-dashed border-green-300 bg-green-100 flex items-center justify-center text-green-600">
+            [Infographic Placeholder – “Data Flow: MSMEs → Students → Experts → AI → MSMEs”]
+          </div>
+        </motion.div>
+      </section>
     </main>
   );
 }
