@@ -238,18 +238,26 @@ export default function Home() {
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center">
             {[
-              "LinkedIn",
-              "Khatabook",
-              "FICCI MSME Forum",
-              "Razorpay",
-              "Startup India",
+              { name: "LinkedIn", src: "/Linkedin.png" },
+              { name: "Khatabook", src: "/Khatabook.jpg" },
+              { name: "FICCI MSME Forum", src: "/ficci msme.jpg" },
+              { name: "Razorpay", src: "/Razorpay_logo.svg" },
+              { name: "Startup India", src: "/Startup India Logo.png" },
             ].map((logo, i) => (
               <div
-                key={i}
-                className="flex items-center justify-center w-28 h-14 bg-gray-100 rounded-xl border border-gray-200 text-gray-500 text-sm font-medium"
-              >
-                [{logo} Logo]
+              key={i}
+              className="flex items-center justify-center w-36 h-20 bg-white rounded-xl border border-[#F8C57C]/30 shadow-sm hover:shadow-md transition-all overflow-hidden p-3"
+            >
+              <div className="relative w-full h-full flex items-center justify-center">
+                <Image
+                  src={logo.src}
+                  alt={`${logo.name} logo`}
+                  fill
+                  className="object-contain p-2"
+                  sizes="(max-width: 768px) 100vw, 200px"
+                />
               </div>
+            </div>
             ))}
           </div>
         </div>
