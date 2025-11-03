@@ -309,6 +309,124 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+      {/* =================== PRICING SECTION =================== */}
+      <section className="w-full py-24 px-6 bg-gradient-to-b from-white to-gray-50 text-center">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          Consulting That Doesn’t Cost a Fortune — Literally.
+        </h2>
+        <p className="text-lg text-gray-600 mb-16">
+          Why should great strategy be a luxury? Here’s how we compare.
+        </p>
+
+        {/* Pricing Comparison Grid */}
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto text-left">
+          <div className="absolute top-6 right-6 bg-white px-4 py-2 rounded-full shadow text-sm font-semibold text-gray-800">
+              ₹5–10L+
+            </div>
+          {/* Traditional Consulting */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gray-100 rounded-3xl p-10 shadow-sm border-t-4 border-gray-400"
+          >
+            
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              Before: Traditional Consulting (Grant Thornton & Others)
+            </h3>
+
+            <ul className="space-y-5 text-gray-700 leading-relaxed">
+              <li className="flex items-start">
+                <span className="mr-3 text-gray-500 text-xl">💰</span>
+                <span><strong>Cost:</strong> ₹5–10 lakh+ per engagement</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-gray-500 text-xl">⏳</span>
+                <span><strong>Time:</strong> 8–12 weeks before first actionable output</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-gray-500 text-xl">👥</span>
+                <span><strong>Approach:</strong> Human consultants, static reports, limited revisions</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-gray-500 text-xl">🏢</span>
+                <span><strong>Target:</strong> Mid-to-large corporates only</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-gray-500 text-xl">⚠️</span>
+                <span><strong>Limitation:</strong> Not accessible to 98% of India’s MSMEs</span>
+              </li>
+            </ul>
+
+            <div className="mt-8 h-56 rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center bg-gray-200 text-gray-600">
+              [Visual Placeholder – “Consultant Reports / Invoices”]
+            </div>
+          </motion.div>
+
+          {/* AI Platform Pricing */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-blue-50 rounded-3xl p-10 shadow-sm border-t-4 border-blue-400"
+          >
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              After: Our AI Fractional Consulting Platform
+            </h3>
+
+            <ul className="space-y-5 text-gray-700 leading-relaxed">
+              <li className="flex items-start">
+                <span className="mr-3 text-blue-500 text-xl">⚡</span>
+                <span><strong>Cost:</strong> Free starter diagnostic + ₹999/month pro insights</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-blue-500 text-xl">⏱️</span>
+                <span><strong>Time:</strong> Real-time insights within 5 minutes</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-blue-500 text-xl">🤖</span>
+                <span><strong>Approach:</strong> Always-on AI partner, continuous improvement</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-blue-500 text-xl">🌍</span>
+                <span><strong>Target:</strong> 63 million+ Indian MSMEs</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-blue-500 text-xl">💪</span>
+                <span><strong>Advantage:</strong> Scales instantly, affordable, democratized access</span>
+              </li>
+            </ul>
+
+            <div className="mt-8 h-56 rounded-2xl border-2 border-dashed border-blue-200 flex items-center justify-center bg-blue-100 text-blue-600">
+              [Visual Placeholder – “AI Pricing Dashboard / Tier Comparison”]
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Why Ours Is Better Summary */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-20 max-w-3xl mx-auto bg-green-50 p-10 rounded-3xl shadow-sm border-l-8 border-green-400"
+        >
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            Why Ours Wins Every Time
+          </h3>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Traditional consulting is like buying a vintage car — impressive, but expensive and hard to maintain.
+            Our model is like switching to an electric vehicle — faster, smarter, and sustainable. You pay for value,
+            not overheads.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Plus, your data stays yours. The more you use the platform, the more personalized and accurate it gets.
+            You’re not buying a report — you’re building an evolving business brain.
+          </p>
+        </motion.div>
+      </section>
     </main>
   );
 }
