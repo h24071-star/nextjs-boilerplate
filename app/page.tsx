@@ -99,10 +99,17 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Real Image */}
           <div className="md:w-1/2 flex justify-center">
-            <div className="w-full h-72 rounded-2xl bg-rose-100 border-2 border-dashed border-rose-200 flex items-center justify-center text-gray-500">
-              [Image Placeholder – “Struggling MSME owner”]
+            <div className="w-full h-72 relative rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/invisible wall.jpg"
+                alt="Struggling MSME owner"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
           </div>
         </motion.div>
@@ -125,10 +132,17 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Real Image */}
           <div className="md:w-1/2 flex justify-center">
-            <div className="w-full h-72 rounded-2xl bg-blue-100 border-2 border-dashed border-blue-200 flex items-center justify-center text-gray-500">
-              [Image Placeholder – “AI consulting lightbulb moment”]
+            <div className="w-full h-72 relative rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/lightbulb.jpg"
+                alt="Struggling MSME owner"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
           </div>
         </motion.div>
@@ -145,16 +159,23 @@ export default function Home() {
               That’s how our AI-powered fractional consulting platform was born.
               It starts with the <span className="font-semibold">MSME Health Tool</span> — a simple, free 
               diagnostic that understands your business in minutes. Then, it acts like a virtual
-              strategy partner — offering tailored insights, action plans, and even connects you to
-              India’s brightest MBA minds when you need a human touch. Every conversation trains 
+              strategy partner — offering tailored insights, action plans, distilling knowledge it has gained from expert
+              consultants, top university professors and India’s brightest MBA minds when you need a human touch. Every conversation trains 
               the system to get better, for you and for every MSME that follows.
             </p>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Real Image */}
           <div className="md:w-1/2 flex justify-center">
-            <div className="w-full h-72 rounded-2xl bg-green-100 border-2 border-dashed border-green-200 flex items-center justify-center text-gray-500">
-              [Image Placeholder – “AI platform helping MSME growth”]
+            <div className="w-full h-72 relative rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/Smart way.jpg"
+                alt="Struggling MSME owner"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
           </div>
         </motion.div>
