@@ -3,14 +3,32 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+
 
 export default function Home() {
   const [hover, setHover] = useState(false);
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-6 py-16 bg-gradient-to-b from-white to-gray-50 text-center">
+      {/* =================== NAVBAR =================== */}
+    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50 py-4 px-8 flex justify-between items-center">
+      <h1 className="text-2xl font-bold text-gray-900">
+        Fractional Consulting<span className="text-[#F8C57C]">.</span>
+      </h1>
+      <div className="hidden md:flex gap-8 text-gray-700 font-medium">
+        <a href="#hero" className="hover:text-[#F8C57C] transition-colors">Home</a>
+        <a href="#story" className="hover:text-[#F8C57C] transition-colors">Story</a>
+        <a href="#social" className="hover:text-[#F8C57C] transition-colors">Social Proof</a>
+        <a href="#ai" className="hover:text-[#F8C57C] transition-colors">AI Advantage</a>
+        <a href="#pricing" className="hover:text-[#F8C57C] transition-colors">Pricing</a>
+        <a href="#conversion" className="hover:text-[#F8C57C] transition-colors">Get Started</a>
+      </div>
+    </nav>
+    <div className="pt-24" /> {/* Spacer to offset the fixed navbar height */}
       {/* Hero Section */}
-      <section className="max-w-4xl">
+      <section id="hero" className="max-w-4xl scroll-mt-24">
         {/* Headline */}
         <h1 className="text-5xl font-bold text-gray-900 mb-6">
           Your AI Strategy Partner for India’s MSMEs
@@ -36,9 +54,11 @@ export default function Home() {
             Try the Free MSME Health Tool
           </button>
 
+          <Link href="https://demo.chat-sdk.dev/">
           <button className="px-8 py-4 rounded-xl border border-gray-400 text-gray-700 hover:bg-gray-100 transition-all">
-            See how it works →
+            Have a quick chat with our AI  →
           </button>
+        </Link>
         </div>
 
         {/* Visual Placeholder */}
@@ -47,7 +67,10 @@ export default function Home() {
         </div>
       </section>
       {/* =================== STORY SECTION =================== */}
-      <section className="w-full py-24 px-6 flex flex-col gap-24">
+      <section id="story" className="w-full py-24 px-6 flex flex-col gap-24 scroll-mt-24">
+      <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">
+        Our Story — From Insight to Impact
+      </h2>
         {/* 1️⃣ The Broken Experience */}
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} 
         className="flex flex-col md:flex-row items-center gap-10 rounded-3xl bg-rose-50 p-10 shadow-sm">
@@ -126,7 +149,7 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-      <section className="w-full py-24 px-6 bg-white text-center">
+      <section id = "social" className="w-full py-24 px-6 bg-white text-center">
         <h2 className="text-4xl font-bold text-gray-900 mb-12">
           What Early Users Are Saying
         </h2>
@@ -202,7 +225,7 @@ export default function Home() {
         </div>
       </section>
       {/* =================== AI ADVANTAGE SECTION =================== */}
-      <section className="w-full py-24 px-6 bg-gradient-to-b from-gray-50 to-white text-center">
+      <section id = "ai" className="w-full py-24 px-6 bg-gradient-to-b from-gray-50 to-white text-center">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">
           How Our AI Changes the Game
         </h2>
@@ -258,13 +281,13 @@ export default function Home() {
             className="bg-blue-50 rounded-3xl p-10 shadow-sm border-t-4 border-blue-400"
           >
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-              After: Our AI Fractional Consulting Platform
+              After: Our AI Platform
             </h3>
 
             <ul className="space-y-5 text-gray-700 leading-relaxed">
               <li className="flex items-start">
                 <span className="mr-3 text-blue-500 text-xl">⚡</span>
-                Instant, AI-powered diagnosis through the MSME Health Tool.
+                Instant, AI-powered diagnosis through the MSME Health Tool, which is free.
               </li>
               <li className="flex items-start">
                 <span className="mr-3 text-blue-500 text-xl">💡</span>
@@ -272,11 +295,11 @@ export default function Home() {
               </li>
               <li className="flex items-start">
                 <span className="mr-3 text-blue-500 text-xl">🌍</span>
-                Community-trained AI — continuously learning from MSMEs, students, and experts.
+                Customised AI — continuous learning from students, experts
               </li>
               <li className="flex items-start">
                 <span className="mr-3 text-blue-500 text-xl">💬</span>
-                Always available, multilingual, and scalable — your 24x7 virtual strategy partner.
+                 Your 24x7 multilingual virtual strategy partner.
               </li>
             </ul>
 
@@ -310,7 +333,7 @@ export default function Home() {
         </motion.div>
       </section>
       {/* =================== PRICING SECTION =================== */}
-      <section className="w-full py-24 px-6 bg-gradient-to-b from-white to-gray-50 text-center">
+      <section id = "pricing" className="w-full py-24 px-6 bg-gradient-to-b from-white to-gray-50 text-center">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">
           Consulting That Doesn’t Cost a Fortune — Literally.
         </h2>
@@ -337,7 +360,7 @@ export default function Home() {
             <ul className="space-y-5 text-gray-700 leading-relaxed">
               <li className="flex items-start">
                 <span className="mr-3 text-gray-500 text-xl">💰</span>
-                <span><strong>Cost:</strong> ₹5–10 lakh+ per engagement</span>
+                <span><strong>Cost:</strong> ₹5–10 lakh+ per engagement and further costs if project extended or scope change</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-3 text-gray-500 text-xl">⏳</span>
@@ -349,7 +372,7 @@ export default function Home() {
               </li>
               <li className="flex items-start">
                 <span className="mr-3 text-gray-500 text-xl">🏢</span>
-                <span><strong>Target:</strong> Mid-to-large corporates only</span>
+                <span><strong>Target:</strong> Organisations with big purses</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-3 text-gray-500 text-xl">⚠️</span>
@@ -426,7 +449,7 @@ export default function Home() {
         </motion.div>
       </section>
       {/* =================== CONVERSION PATH SECTION =================== */}
-      <section className="w-full py-24 px-6 bg-gradient-to-b from-gray-50 to-white text-center">
+      <section id = "conversion" className="w-full py-24 px-6 bg-gradient-to-b from-gray-50 to-white text-center">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">
           What Happens After You Sign Up
         </h2>
@@ -529,6 +552,11 @@ export default function Home() {
           </button>
         </motion.div>
       </section>
+      <style jsx global>{`
+      html {
+        scroll-behavior: smooth;
+      }
+    `}</style>
     </main>
   );
 }
