@@ -425,6 +425,110 @@ export default function Home() {
           </p>
         </motion.div>
       </section>
+      {/* =================== CONVERSION PATH SECTION =================== */}
+      <section className="w-full py-24 px-6 bg-gradient-to-b from-gray-50 to-white text-center">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          What Happens After You Sign Up
+        </h2>
+        <p className="text-lg text-gray-600 mb-16">
+          We’ve kept it simple, fast, and genuinely useful — no spam, no friction, just impact.
+        </p>
+
+        {/* Conversion Steps Timeline */}
+        <div className="flex flex-col md:flex-row justify-center items-stretch gap-10 max-w-6xl mx-auto text-left">
+          {[
+            {
+              step: "Step 1",
+              title: "Quick Sign-up",
+              desc: "You share a few key details about your business — revenue range, sector, and top challenges. No lengthy forms or jargon.",
+              icon: "📝",
+              color: "bg-blue-50 border-blue-300",
+            },
+            {
+              step: "Step 2",
+              title: "Instant MSME Health Score",
+              desc: "Our AI tool instantly benchmarks your business against industry peers, flagging red zones and quick wins in under 5 minutes.",
+              icon: "⚡",
+              color: "bg-green-50 border-green-300",
+            },
+            {
+              step: "Step 3",
+              title: "Personalized Action Plan",
+              desc: "Based on your score, you receive a customized 30-day action plan and a strategy snapshot you can actually execute.",
+              icon: "📈",
+              color: "bg-yellow-50 border-yellow-300",
+            },
+            {
+              step: "Step 4",
+              title: "Community & Continuous Learning",
+              desc: "You join a curated network of MSME founders and mentors — sharing insights and fueling our AI’s learning loop.",
+              icon: "🤝",
+              color: "bg-rose-50 border-rose-300",
+            },
+          ].map((s, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className={`flex-1 rounded-3xl p-8 border-2 ${s.color} shadow-sm relative`}
+            >
+              <div className="text-4xl mb-4">{s.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {s.step}: {s.title}
+              </h3>
+              <p className="text-gray-700 leading-relaxed">{s.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Example Welcome Email */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-24 max-w-3xl mx-auto bg-white border border-gray-200 rounded-2xl shadow-md text-left p-8"
+        >
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Your Welcome Email</h3>
+          <p className="text-gray-700 mb-6">
+            Here’s what you’ll see in your inbox minutes after signing up:
+          </p>
+
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-gray-700">
+            <p className="font-semibold text-gray-900 mb-2">Subject: 🎉 Welcome to Your MSME Health Dashboard!</p>
+            <p className="mb-4">Hi <span className="font-medium">[Your Name]</span>,</p>
+            <p className="mb-4">
+              We’re thrilled to have you onboard. Your personalized MSME Health Score and strategy snapshot are ready.
+            </p>
+            <p className="mb-4">
+              <strong>👉 Step 1:</strong> Explore your dashboard<br />
+              <strong>👉 Step 2:</strong> Save your first growth plan<br />
+              <strong>👉 Step 3:</strong> Join our founder community to exchange insights
+            </p>
+            <p>Let’s make data your competitive edge — together.</p>
+            <p className="mt-6 text-sm text-gray-500">— The Fractional Consulting Team</p>
+          </div>
+        </motion.div>
+
+        {/* Final CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-20"
+        >
+          <h3 className="text-3xl font-semibold text-gray-900 mb-4">
+            Ready to See Your MSME Health Score?
+          </h3>
+          <p className="text-gray-600 mb-8">Join 100+ founders already discovering smarter growth paths.</p>
+          <button className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-2xl shadow-md transition-all transform hover:scale-105">
+            Try the Free MSME Health Tool →
+          </button>
+        </motion.div>
+      </section>
     </main>
   );
 }
