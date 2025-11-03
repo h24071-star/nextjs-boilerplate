@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   const [hover, setHover] = useState(false);
@@ -86,8 +87,8 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-lg text-gray-700 mb-10 leading-relaxed max-w-2xl mx-auto"
           >
-            Instantly diagnose your business health, uncover growth opportunities, and
-            get actionable consulting insights — at 1% the cost of traditional firms.
+            Instantly diagnose your business health, uncover growth opportunities, and get actionable consulting insights — 
+            at 1% the cost of traditional firms.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -109,9 +110,11 @@ export default function Home() {
               Try the Free MSME Health Tool
             </button>
 
+            <Link href="https://demo.chat-sdk.dev/">
             <button className="px-8 py-4 rounded-xl border border-gray-400 text-gray-700 hover:bg-gray-100 transition-all">
               See how it works →
             </button>
+          </Link>
           </motion.div>
 
           {/* Visual Placeholder */}
@@ -125,20 +128,20 @@ export default function Home() {
           {[
             {
               title: "When great businesses hit invisible walls",
-              desc: "You’ve seen it before — a factory owner in Coimbatore running on thin margins, a boutique founder in Jaipur juggling GST filings and supply issues, a tech SME in Pune wondering why growth suddenly plateaued. They aren’t doing anything wrong — they’re just flying blind.",
+              desc: "You’ve seen it before — a factory owner in Coimbatore running on thin margins, a boutique founder in Jaipur juggling GST filings and supply issues, a tech SME in Pune wondering why growth suddenly plateaued. They aren’t doing anything wrong — they’re just flying blind. No real benchmarks, no expert guidance, and definitely no time to figure it all out alone. Traditional consulting? Out of reach. Every hour of advice costs what they earn in a week.",
               color: "bg-amber-50",
               placeholder: "[Struggling MSME Owner Image]",
             },
             {
               title: "The lightbulb moment",
-              desc: "We realized that small business owners weren’t short on ambition — just access. What if AI could do what consultants do — diagnose, benchmark, and guide — but at near-zero cost?",
+              desc: "We realized that small business owners weren’t short on ambition — just access. What if AI could do what consultants do — diagnose, benchmark, and guide — but at near-zero cost? What if insights that once lived inside expensive PowerPoints could be generated in seconds, personalized for every MSME in India? That was the moment the idea clicked. Consulting didn’t need to be elite. It needed to be empathetic, accessible, and infinitely scalable.",
               color: "bg-white",
               reverse: true,
               placeholder: "[AI Consulting Lightbulb Image]",
             },
             {
               title: "Building a smarter way forward",
-              desc: "That’s how our AI-powered fractional consulting platform was born. It starts with the MSME Health Tool — a simple, free diagnostic that understands your business in minutes.",
+              desc: "That’s how our AI-powered fractional consulting platform was born. It starts with the MSME Health Tool — a simple, free diagnostic that understands your business in minutes. Then, it acts like a virtual strategy partner — offering tailored insights, action plans, and even connects you to India’s brightest MBA minds when you need a human touch. Every conversation trains the system to get better, for you and for every MSME that follows.",
               color: "bg-amber-50",
               placeholder: "[AI Platform Growth Image]",
             },
@@ -192,7 +195,7 @@ export default function Home() {
                 name: "Faiz Rahman",
                 role: "Managing Partner, Rahman Textiles, Tiruppur",
                 quote:
-                  "When I saw my MSME Health Score, it felt like someone finally understood my business.",
+                  "When I saw my MSME Health Score, it felt like someone finally understood my business. I didn’t need a 100-page report — just real steps that work.",
               },
             ].map((t, i) => (
               <motion.div
