@@ -315,9 +315,15 @@ export default function Home() {
             </ul>
 
             {/* Placeholder Visual */}
-            <div className="mt-8 h-56 rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center bg-gray-200 text-gray-600">
-              [Visual Placeholder – “Traditional Consulting Office”]
-            </div>
+            <div className="mt-8 w-full">
+            <Image
+              src="/traditional consulting office.jpg"   
+              alt="Traditional Consulting Office"
+              width={800}
+              height={500}
+              className="w-full h-56 object-cover rounded-2xl shadow-md border border-gray-300"
+            />
+          </div>
           </motion.div>
 
           {/* AFTER - AI Platform */}
@@ -352,8 +358,14 @@ export default function Home() {
             </ul>
 
             {/* Placeholder Visual */}
-            <div className="mt-8 h-56 rounded-2xl border-2 border-dashed border-blue-200 flex items-center justify-center bg-blue-100 text-blue-600">
-              [Visual Placeholder – “AI Dashboard / Data Flywheel Graphic”]
+            <div className="mt-8 w-full">
+              <Image
+                src="/AI Bot.jpg"       // ← Place this inside /public/
+                alt="AI Dashboard and Data Flywheel"
+                width={800}
+                height={500}
+                className="w-full h-56 object-cover rounded-2xl shadow-md border border-blue-200"
+              />
             </div>
           </motion.div>
         </div>
@@ -375,9 +387,15 @@ export default function Home() {
             into the AI — creating a living, learning ecosystem that grows smarter with
             each interaction.
           </p>
-          <div className="h-60 rounded-2xl border-2 border-dashed border-green-300 bg-green-100 flex items-center justify-center text-green-600">
-            [Infographic Placeholder – “Data Flow: MSMEs → Students → Experts → AI → MSMEs”]
-          </div>
+          <div className="flex justify-center mb-6">
+              <Image
+                src="/flywheel.png" 
+                alt="AI Self-Learning Intelligence Flywheel"
+                width={560}
+                height={280}
+                className="rounded-xl shadow-md"
+              />
+            </div>
         </motion.div>
       </section>
       {/* =================== PRICING SECTION =================== */}
@@ -428,8 +446,14 @@ export default function Home() {
               </li>
             </ul>
 
-            <div className="mt-8 h-56 rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center bg-gray-200 text-gray-600">
-              [Visual Placeholder – “Consultant Reports / Invoices”]
+            <div className="mt-8 w-full">
+              <Image
+                src="/consultants.png"        
+                alt="Traditional consulting invoice visual"
+                width={800}
+                height={500}
+                className="w-full h-56 object-cover rounded-2xl shadow-md border border-gray-300"
+              />
             </div>
           </motion.div>
 
@@ -468,33 +492,45 @@ export default function Home() {
               </li>
             </ul>
 
-            <div className="mt-8 h-56 rounded-2xl border-2 border-dashed border-blue-200 flex items-center justify-center bg-blue-100 text-blue-600">
-              [Visual Placeholder – “AI Pricing Dashboard / Tier Comparison”]
+            <div className="mt-8 w-full">
+              <Image
+                src="/AI Consulting.png"            
+                alt="AI platform pricing dashboard"
+                width={800}
+                height={500}
+                className="w-full h-56 object-cover rounded-2xl shadow-md border border-blue-200"
+              />
             </div>
           </motion.div>
         </div>
 
         {/* Why Ours Is Better Summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-20 max-w-3xl mx-auto bg-green-50 p-10 rounded-3xl shadow-sm border-l-8 border-green-400"
-        >
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-            Why Ours Wins Every Time
-          </h3>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Traditional consulting is like buying a vintage car — impressive, but expensive and hard to maintain.
-            Our model is like switching to an electric vehicle — faster, smarter, and sustainable. You pay for value,
-            not overheads.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Plus, your data stays yours. The more you use the platform, the more personalized and accurate it gets.
-            You’re not buying a report — you’re building an evolving business brain.
-          </p>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-20 max-w-3xl mx-auto bg-green-50 p-10 rounded-3xl shadow-sm border-l-8 border-green-400 text-center"
+          >
+
+
+
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+              Why Ours Wins Every Time
+            </h3>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Traditional consulting is like buying a vintage car — impressive, but expensive and hard to maintain.
+              Our model is like switching to an electric vehicle — faster, smarter, and sustainable. You pay for value,
+              not overheads.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              Plus, your data stays yours. The more you use the platform, the more personalized and accurate it gets.
+              You’re not buying a report — you’re building an evolving business brain.
+            </p>
+
+          </motion.div>
       </section>
       {/* =================== CONVERSION PATH SECTION =================== */}
       <section id = "conversion" className="w-full py-24 px-6 bg-gradient-to-b from-gray-50 to-white text-center">
@@ -601,10 +637,10 @@ export default function Home() {
               <div className="flex flex-col md:flex-row md:justify-between md:items-center p-8 border-b border-gray-200 gap-4">
                 <div>
                   <h1 className="text-3xl font-extrabold text-gray-900">
-                    <span className="text-amber-600">UpScale</span> MSME Diagnostic Report
+                    <span className="text-amber-600">Your</span> MSME Diagnostic Report
                   </h1>
                   <p className="text-gray-600 text-lg">
-                    For: <span className="font-semibold">Sharma Handicrafts Pvt. Ltd.</span>
+                    <span className="font-semibold">Organisation: Sharma Handicrafts Pvt. Ltd.</span>
                   </p>
                 </div>
                 <span className="bg-amber-100 text-amber-700 text-sm font-semibold px-4 py-2 rounded-full">
@@ -682,11 +718,11 @@ export default function Home() {
 
                 {/* Priority 1 */}
                 <div className="border border-gray-200 rounded-xl overflow-hidden">
-                  <div className="bg-amber-50 p-5 flex items-center gap-4">
-                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-amber-600 text-white font-bold">
+                  <div className="bg-gray-100 p-5 flex items-center gap-4">
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white font-bold">
                       1
                     </span>
-                    <h3 className="text-lg font-bold text-amber-800">
+                    <h3 className="text-lg font-bold text-gray-800">
                       PRIORITY 1: Reduce Customer Acquisition Cost
                     </h3>
                   </div>
