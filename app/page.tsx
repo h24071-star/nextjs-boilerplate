@@ -582,6 +582,184 @@ export default function Home() {
             <p className="mt-6 text-sm text-gray-500">— The Fractional Consulting Team</p>
           </div>
         </motion.div>
+        {/* Sample MSME Health Report */}
+        <section id="sample-report" className="py-20 px-6 bg-white">
+          <div className="max-w-5xl mx-auto">
+
+            {/* Section Heading */}
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">
+              A Sample MSME Health Report
+            </h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+              This is the kind of clarity an MSME founder gets within minutes — benchmarks, risks,  
+              and a clear roadmap. Created automatically using your financials and industry data.
+            </p>
+
+            <div className="bg-gray-50 rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
+
+              {/* Report Header */}
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center p-8 border-b border-gray-200 gap-4">
+                <div>
+                  <h1 className="text-3xl font-extrabold text-gray-900">
+                    <span className="text-amber-600">UpScale</span> MSME Diagnostic Report
+                  </h1>
+                  <p className="text-gray-600 text-lg">
+                    For: <span className="font-semibold">Sharma Handicrafts Pvt. Ltd.</span>
+                  </p>
+                </div>
+                <span className="bg-amber-100 text-amber-700 text-sm font-semibold px-4 py-2 rounded-full">
+                  CONFIDENTIAL
+                </span>
+              </div>
+
+              {/* Overall Score */}
+              <div className="p-8 border-b border-gray-200">
+                <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  Overall MSME Health Score
+                </h2>
+
+                <div className="flex flex-col md:flex-row items-center gap-8 mt-4">
+                  <div className="text-center">
+                    <span className="text-7xl font-extrabold text-amber-600">68</span>
+                    <span className="text-3xl font-bold text-gray-400">/100</span>
+                  </div>
+
+                  <div className="w-full">
+                    <div className="w-full bg-gray-200 rounded-full h-4">
+                      <div className="bg-amber-600 h-4 rounded-full" style={{ width: "68%" }} />
+                    </div>
+                    <p className="text-gray-700 mt-3">
+                      Your score is <span className="font-semibold text-amber-600">above average</span> for the  
+                      <span className="font-semibold"> Textiles & Apparel</span> sector, but there are  
+                      <span className="font-semibold text-red-600"> 3 critical areas</span> for immediate improvement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Key Benchmarks */}
+              <div className="p-8 border-b border-gray-200">
+                <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-5">
+                  Key Benchmarks (vs Industry)
+                </h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                  {/* Margin */}
+                  <div className="bg-white p-6 rounded-xl border border-gray-200">
+                    <p className="text-sm font-medium text-gray-600">Operating Margin</p>
+                    <div className="flex items-baseline gap-2 mt-1">
+                      <p className="text-3xl font-bold text-red-600">12%</p>
+                      <p className="text-lg font-semibold text-gray-400">vs 18%</p>
+                    </div>
+                    <p className="text-sm text-red-700 mt-1">33% below benchmark</p>
+                  </div>
+
+                  {/* CAC */}
+                  <div className="bg-white p-6 rounded-xl border border-gray-200">
+                    <p className="text-sm font-medium text-gray-600">Customer Acquisition Cost</p>
+                    <div className="flex items-baseline gap-2 mt-1">
+                      <p className="text-3xl font-bold text-red-600">₹1,500</p>
+                      <p className="text-lg font-semibold text-gray-400">vs ₹950</p>
+                    </div>
+                    <p className="text-sm text-red-700 mt-1">58% above benchmark</p>
+                  </div>
+
+                  {/* Inventory */}
+                  <div className="bg-white p-6 rounded-xl border border-gray-200">
+                    <p className="text-sm font-medium text-gray-600">Inventory Turnover</p>
+                    <div className="flex items-baseline gap-2 mt-1">
+                      <p className="text-3xl font-bold text-green-600">4.2×</p>
+                      <p className="text-lg font-semibold text-gray-400">vs 4.0×</p>
+                    </div>
+                    <p className="text-sm text-green-700 mt-1">5% above benchmark</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* AI Roadmap */}
+              <div className="p-8 space-y-8">
+
+                {/* Priority 1 */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <div className="bg-amber-50 p-5 flex items-center gap-4">
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-amber-600 text-white font-bold">
+                      1
+                    </span>
+                    <h3 className="text-lg font-bold text-amber-800">
+                      PRIORITY 1: Reduce Customer Acquisition Cost
+                    </h3>
+                  </div>
+
+                  <div className="p-6">
+                    <p className="font-semibold text-gray-800">AI Insight:</p>
+                    <p className="text-gray-700 mb-4">
+                      Your CAC is 58% above industry average. GA data shows a  
+                      <strong> 70% drop-off on your payment page</strong>.
+                    </p>
+
+                    <p className="font-semibold text-gray-800">AI Recommendation:</p>
+                    <p className="text-gray-700">
+                      Introduce a cart abandonment flow — can recover  
+                      <strong> 8–10% lost revenue</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Priority 2 */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <div className="bg-gray-100 p-5 flex items-center gap-4">
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white font-bold">
+                      2
+                    </span>
+                    <h3 className="text-lg font-bold text-gray-800">
+                      PRIORITY 2: Improve Operating Margin
+                    </h3>
+                  </div>
+
+                  <div className="p-6">
+                    <p className="font-semibold text-gray-800">AI Insight:</p>
+                    <p className="text-gray-700 mb-4">
+                      Raw material costs are <strong>22% higher</strong> than benchmarks.
+                    </p>
+
+                    <p className="font-semibold text-gray-800">AI Recommendation:</p>
+                    <p className="text-gray-700">
+                      Compare quotes from <strong>3 alternative suppliers</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Priority 3 */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <div className="bg-gray-100 p-5 flex items-center gap-4">
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white font-bold">
+                      3
+                    </span>
+                    <h3 className="text-lg font-bold text-gray-800">
+                      PRIORITY 3: Optimize Inventory
+                    </h3>
+                  </div>
+
+                  <div className="p-6">
+                    <p className="font-semibold text-gray-800">AI Insight:</p>
+                    <p className="text-gray-700 mb-4">
+                      Slow turnover ties up <strong>₹3.5 Lakhs</strong> in working capital.
+                    </p>
+
+                    <p className="font-semibold text-gray-800">AI Recommendation:</p>
+                    <p className="text-gray-700">
+                      Provide a <strong>20% discount</strong> for 30 days to liquidate stock.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </section>
 
         {/* Final CTA */}
         <motion.div
