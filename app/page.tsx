@@ -37,7 +37,7 @@ export default function Home() {
         {/* Subheadline */}
         <p className="text-lg text-gray-600 mb-10 leading-relaxed">
           Instantly diagnose your business health, uncover growth opportunities, and
-          get actionable consulting insights — at 1% abcd the cost of traditional firms.
+          get actionable consulting insights — at 1% the cost of traditional firms.
         </p>
 
         {/* Call-to-Action Buttons */}
